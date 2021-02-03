@@ -27,7 +27,7 @@ export default function App() {
           <>
             <Header title={title} description={description} />
             <Posts data={data} show={show} />
-            <Row className="justify-content-md-center" style={{ marginTop: 40 }}>
+            <Row className="justify-content-md-center" style={{ margin: 40 }}>
               {!showMoreCards
                 ? <Button variant="outline-danger" onClick={handleShowMoreCards}>Read More</Button>
                 : <Button variant="outline-danger" onClick={handleShowLessCards}>Read Less</Button>}
