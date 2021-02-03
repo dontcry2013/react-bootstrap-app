@@ -21,7 +21,9 @@ export default ({ maxHeight, children }) => {
         {children}
       </div>
       <br />
-      <Button onClick={() => setExpanded(!expanded)} variant="outline-light">{expanded ? 'Read Less' : 'Read More'}</Button>
+      {/* <Button onClick={() => setExpanded(!expanded)} variant="outline-light">
+        {expanded ? 'Read Less' : 'Read More'}
+      </Button> */}
     </Card.Text>
   );
 }

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, CardDeck, Col } from 'react-bootstrap';
+import {
+  Card, CardDeck, Col, Button,
+} from 'react-bootstrap';
 import Description from './Description';
 
 const colors = ['#f59926', '#4aadde', '#ab75ad'];
@@ -14,7 +16,7 @@ export default ({ data, show }) => {
               return (
                 <Col xs={12} md={6} lg={4} key={post.id}>
                   <Card style={{
-                    minHeight: 200, minWidth: 255, width: '100%', backgroundColor: colors[index % 3], margin: 5,
+                    minHeight: 400, minWidth: 255, width: '100%', backgroundColor: colors[index % 3], margin: 5,
                   }}
                   >
                     <Card.Body>
@@ -22,6 +24,9 @@ export default ({ data, show }) => {
                       <Card.Title style={{ height: 45 }}>{post.title.length > 40 ? `${post.title.substring(0, 40)} ...` : post.title}</Card.Title>
                       <Description maxHeight={100}>{post.body}</Description>
                     </Card.Body>
+                    <Card.Footer style={{ borderTop: 0 }}>
+                      <Button variant="outline-light">Read More</Button>
+                    </Card.Footer>
                   </Card>
                 </Col>
               )
